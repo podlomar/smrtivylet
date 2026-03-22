@@ -10,24 +10,27 @@ interface Props {
 }
 
 const { number, name, km, photo, photoAlt, mapUrl, extraLink } = Astro.props;
+const kmFormatted = km.toLocaleString('cs-CZ');
 ---
 <article class="stop">
-  <img src={photo} alt={photoAlt} class="stop__photo" />
-  <div class="stop__body">
-    <h4 class="stop__head">
-      <span>{number}.</span>
-      <span class="stop__name">{name}</span>
-      <span>{km}&nbsp;km</span>
-    </h4>
+  <div class="stop__content">
+    <h4 class="stop__name">{name}</h4>
     <slot />
-    <p>
+    <p class="stop__links">
       <a href={mapUrl}>Zobrazit na mapě</a>
       {extraLink && (
         <>
-          ,<br />
+          <br />
           <a href={extraLink.url}>{extraLink.text}</a>
         </>
       )}
     </p>
+    <span class="stop__km">{kmFormatted}&nbsp;km</span>
+  </div>
+  <div class="stop__marker">
+    <span class="stop__number">{number}</span>
+  </div>
+  <div class="stop__visual">
+    <img src={photo} alt={photoAlt} class="stop__photo" />
   </div>
 </article>
