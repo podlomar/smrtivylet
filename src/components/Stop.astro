@@ -1,0 +1,33 @@
+---
+interface Props {
+  number: number;
+  name: string;
+  km: number;
+  photo: string;
+  photoAlt: string;
+  mapUrl: string;
+  extraLink?: { text: string; url: string };
+}
+
+const { number, name, km, photo, photoAlt, mapUrl, extraLink } = Astro.props;
+---
+<article class="stop">
+  <img src={photo} alt={photoAlt} class="stop__photo" />
+  <div class="stop__body">
+    <h4 class="stop__head">
+      <span>{number}.</span>
+      <span class="stop__name">{name}</span>
+      <span>{km}&nbsp;km</span>
+    </h4>
+    <slot />
+    <p>
+      <a href={mapUrl}>Zobrazit na mapě</a>
+      {extraLink && (
+        <>
+          ,<br />
+          <a href={extraLink.url}>{extraLink.text}</a>
+        </>
+      )}
+    </p>
+  </div>
+</article>

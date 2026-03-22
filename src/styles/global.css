@@ -1,0 +1,210 @@
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Crazy hack to fix a bug in Android Chrome called font boosting */
+  * {
+    max-height: 16777216px;
+  }
+}
+
+:root {
+  --base-padding: 1.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  :root {
+    --base-padding: 2.5rem;
+  }
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 576px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: #231A21;
+  color: white;
+  margin: 0;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem var(--base-padding);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .main-heading {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+a, a:visited {
+  color: #CAD178;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e0ff96;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 15rem;
+  padding-top: var(--base-padding);
+  padding-bottom: var(--base-padding);
+}
+
+.banner--primary {
+  background-image: url(/img/banner1.jpg);
+}
+
+.banner--secondary {
+  background-image: url(/img/banner2.jpg);
+}
+
+.container {
+  max-width: 54rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.accent {
+  background-color: #C1501F;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  padding: var(--base-padding);
+  margin-bottom: 4rem;
+}
+
+.accent p {
+  margin: 0 0 0.5rem 0;
+}
+
+.accent--shift {
+  margin-top: -2rem;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.columns > * {
+  flex: 1;
+}
+
+@media screen and (min-width: 576px) {
+  .columns {
+    flex-direction: row;
+  }
+
+  .columns:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+.full-image {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 0 0.5rem gray;
+  transition: transform 0.3s ease;
+}
+
+.full-image:hover {
+  transform: scale(1.05);
+}
+
+.stop {
+  display: flex;
+  flex-direction: column;
+  background-color: #AF491D;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  margin: 2rem 0;
+}
+
+.stop__photo {
+  width: auto;
+  height: 8rem;
+  object-fit: cover;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.stop__head {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.stop__name {
+  flex: 1;
+}
+
+.stop__body {
+  flex: 1;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .stop {
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .stop__photo {
+    height: 12rem;
+  }
+
+  .stop__body {
+    padding: 1rem 2rem;
+  }
+}
+
+.footer {
+  text-align: center;
+  color: gray;
+  margin: 3rem 0;
+}
