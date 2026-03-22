@@ -1,170 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Stop from '../components/Stop.astro';
+import Layout from "../layouts/Layout.astro";
+import TripCard from "../components/TripCard.astro";
 ---
+
 <Layout
-  title="Jarní smrtivýlet"
-  description="Jarní smrtivýlet po Českém krasu"
+  title="Smrtivýlet"
+  description="Každoroční jarní výlet po stezkách Českého krasu"
 >
-  <header class="banner banner--primary">
+  <header class="home-hero">
     <div class="container">
-      <h1 class="main-heading">Jarní smrtivýlet</h1>
+      <h1 class="home-hero__title">
+        <img src="/img/icon.svg" alt="" class="home-hero__icon" />
+        Smrtivýlet
+      </h1>
+      <p class="home-hero__subtitle">
+        Každoroční jarní 50 km výlet pro neohrožené dobrodruhy, kteří neznají
+        strach, bolest ani soudnout, i pro zvlášť delikátní jedince, kteří
+        nedají dopustit na teplo domácího krbu, sucho v botách a načančané
+        cappuccinečko.
+      </p>
     </div>
   </header>
 
   <main class="container">
-    <section class="accent accent--shift">
-      <p>
-        Výlet po stezkách Českého krasu pro neohrožené dobrodruhy, kteří neznají strach, bolest ani soudnout, i pro zvlášť delikátní jedince, kteří nedají dopustit na teplo domácího krbu, sucho v botách a načančané cappuccinečko.
-      </p>
-      <p>
-        <b>Termín:</b> 5. dubna 2025 (dle <a href="https://strawpoll.com/GJn44e8qYnz/results">hlasování na StrawPollu</a>)
-      </p>
-    </section>
-
-    <section class="columns">
-      <div>
-        <h2>Průběh výletu</h2>
-        <p>
-          Celková trasa má skoro přesně 50 km, není však <b>vůbec nutné jít celou její délku</b>. Většina výletu je poblíž vlakového spojení Praha - Beroun. Kdo tedy touží po pohodovější procházce, může se připojit či odpojit v navržených místech viz dále. Celá trasa začíná <b>ráno 8:04 v Nižboru na Křivoklátsku</b> a končí <b>večer ve 20:00 v pivovaru v Radotíně u Prahy</b>.
-        </p>
-        <p>
-          <a href="https://mapy.cz/s/cojujanuha">Odkaz na plán trasy (Mapy.cz)</a>
-        </p>
-      </div>
-      <a href="https://mapy.cz/s/cojujanuha">
-        <img src="/img/map.png" alt="Mapa trasy" class="full-image" />
-      </a>
-    </section>
-
-    <section class="columns">
-      <div>
-        <h2>Hospoda až na konci</h2>
-        <p>
-          Aby bylo pro odvážlivce možné dojít od začátku až do konce v rozumném čase, je třeba mít <b>mírně svižnější tempo</b>. Kdo by tedy chtěl po cestě například delší posezení v hospodě či kavárně, je ideální si toto dopřát <b>před, nebo po tom</b>, co se připojíte k hlavní skupině.
-        </p>
-        <p>
-          Pivo po výletě plánujeme až v Radotíně v <a href="https://pivovarhorymir.cz/">Pivovaru Horymír</a>
-        </p>
-      </div>
-      <a href="https://pivovarhorymir.cz/">
-        <img src="/img/horymir.jpg" alt="Pivovar Horymír" class="full-image" />
-      </a>
-    </section>
-  </main>
-
-  <section class="banner banner--secondary">
-    <div class="container">
-      <h2 class="main-heading">Plán trasy</h2>
+    <div class="trips">
+      <TripCard
+        year="2025"
+        href="/2025"
+        image="/img/banner1.jpg"
+        title="Jarní smrtivýlet 2025"
+        description="Výlet po Českém krasu od vyhlášené nádražky v Nižboru až do pivovaru v Radotíně. 5. dubna 2025."
+      />
+      <TripCard
+        year="2026"
+        href="/2026"
+        image="/img/banner2.jpg"
+        title="Jarní smrtivýlet 2026"
+        description="Výlet přírodním parkem Brdy-Hřebeny, ze Zbraslavi do Hostomic."
+        upcoming={true}
+      />
     </div>
-  </section>
-
-  <main class="container">
-    <section class="accent accent--shift">
-      Na trase se nachází 8 míst, kde se můžete připojit nebo odpojit. Jsou vždy blízko nějaké vlakové stanice, kam lze snadno dojet z Prahy.
-    </section>
-
-    <section>
-      <h3>Počasí v den výletu</h3>
-      <a href="https://www.google.com/search?q=predpoved+pocasi+karlstejn+5+dubna">
-        <img src="/img/pocasi.png" alt="Počasí" class="full-image" />
-      </a>
-    </section>
-
-    <section class="stops">
-      <h3>Checkpointy</h3>
-
-      <Stop
-        number={1}
-        name="Nižbor, vlakové nádraží"
-        km={0}
-        photo="/img/nizbor.jpg"
-        photoAlt="Nižbor"
-        mapUrl="https://mapy.cz/s/havunacaza"
-        extraLink={{
-          text: 'Spojení Praha - Nižbor',
-          url: 'https://idos.cz/vlakyautobusymhdvse/spojeni/prehled/?p=Fyb5SSWpsOpfNdTbad2ENK5UbPC5ckqit:I63q:mQ.CNQGeOOLTrOAG5SDLwQ.jaqqhVcj63DSuAj6vKIv15OrOay0YwN29GHtH3cdstTWnqLzoR:j8Um5A014AwQgYdUGaoZtMcVRE-',
-        }}
-      >
-        <p>Začátek celé trasy, odchod z nádraží v 8:04</p>
-      </Stop>
-
-      <Stop
-        number={2}
-        name="U Jahodového vrchu"
-        km={12.4}
-        photo="/img/jahodovy-vrch.jpg"
-        photoAlt="U jahodového vrchu"
-        mapUrl="https://mapy.cz/s/fulunajuca"
-      >
-        <p>Sraz na rozcestí v 10:20. Je třeba dorazit do Hýskova na nádraží a pak ujít kousek do kopce po značce.</p>
-      </Stop>
-
-      <Stop
-        number={3}
-        name="Beroun, vlakové nádraží"
-        km={18}
-        photo="/img/beroun.jpg"
-        photoAlt="Beroun nádraží"
-        mapUrl="https://mapy.cz/s/matovufazu"
-      >
-        <p>Sraz v 11:30 u rozcestníku kousíček od výstupu z nádražní haly v Berouně.</p>
-      </Stop>
-
-      <Stop
-        number={4}
-        name="Kubrychtova bouda"
-        km={27.4}
-        photo="/img/bouda.jpg"
-        photoAlt="Kubrychtova bouda"
-        mapUrl="https://mapy.cz/s/huhujoguzo"
-      >
-        <p>Sraz ve 14:10 u boudy. Dojedete do Srbska na nádraží a vydáte se po značce.</p>
-      </Stop>
-
-      <Stop
-        number={5}
-        name="Karlštejn, pod hradem"
-        km={31.2}
-        photo="/img/karlstejn.jpg"
-        photoAlt="Karlštejn, pod hradem"
-        mapUrl="https://mapy.cz/s/nasupelaga"
-      >
-        <p>Sraz u rozcestníku v 15:10. Dojedete do Karlštejna na nádraží a vydáte se přes most k rozcestníku pod Karlštejnem.</p>
-      </Stop>
-
-      <Stop
-        number={6}
-        name="Přístřešek Karlík"
-        km={37.3}
-        photo="/img/karlik.jpg"
-        photoAlt="Přístřešek Karlík"
-        mapUrl="https://mapy.cz/s/pagumolazo"
-      >
-        <p>Sraz v 16:50 u přístřešku. Dojedete do Dobřichovic na nádraží a vydáte se po značce k přístřešku.</p>
-      </Stop>
-
-      <Stop
-        number={7}
-        name="Rozcestí Sulava"
-        km={44.7}
-        photo="/img/sulava.jpg"
-        photoAlt="Rozcestí Sulava"
-        mapUrl="https://mapy.cz/s/dunohomome"
-      >
-        <p>Sraz v 18:20 u rozcestníku. Dojedete do Černošic a pak do kopce po značce k rozcestí.</p>
-      </Stop>
-
-      <Stop
-        number={8}
-        name="Pivovar Horymír"
-        km={49.4}
-        photo="/img/horymir.jpg"
-        photoAlt="Pivovar Horymír"
-        mapUrl="https://mapy.cz/s/kukuzukata"
-      >
-        <p>Konec cesty. Předpokládáme, že zvládneme dorazit před osmou hodinou.</p>
-      </Stop>
-    </section>
   </main>
 </Layout>

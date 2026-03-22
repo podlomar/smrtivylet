@@ -299,6 +299,149 @@ a:hover {
   }
 }
 
+/* Back link on trip pages */
+.back-link {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease;
+}
+
+.back-link:hover,
+.back-link:visited {
+  color: white;
+}
+
+/* Landing page hero */
+.home-hero {
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+.home-hero__title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.home-hero__icon {
+  height: 0.85em;
+  width: auto;
+}
+
+.home-hero__subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .home-hero__title {
+    font-size: 5.5rem;
+  }
+}
+
+/* Trip cards grid */
+.trips {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem 0 4rem;
+}
+
+@media screen and (min-width: 576px) {
+  .trips {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.trip-card {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  overflow: hidden;
+  background-color: #AF491D;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.trip-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 2.5rem rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.trip-card--upcoming {
+  filter: saturate(0.5);
+}
+
+.trip-card__banner {
+  height: 13rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.trip-card__year {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 0.75rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  backdrop-filter: blur(4px);
+}
+
+.trip-card__badge {
+  background: rgba(193, 80, 31, 0.85);
+  padding: 0.2rem 0.75rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  backdrop-filter: blur(4px);
+}
+
+.trip-card__body {
+  padding: 1.25rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.trip-card__title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.trip-card__desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  flex: 1;
+}
+
+.trip-card__cta {
+  margin-top: 0.75rem;
+  color: #CAD178;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   color: gray;

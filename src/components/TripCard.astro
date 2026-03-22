@@ -1,0 +1,25 @@
+---
+interface Props {
+  year: string;
+  href: string;
+  image: string;
+  title: string;
+  description: string;
+  upcoming?: boolean;
+}
+
+const { year, href, image, title, description, upcoming = false } = Astro.props;
+---
+<a href={href} class:list={['trip-card', { 'trip-card--upcoming': upcoming }]}>
+  <div class="trip-card__banner" style={`background-image: url(${image})`}>
+    <span class="trip-card__year">{year}</span>
+    {upcoming && <span class="trip-card__badge">Připravujeme</span>}
+  </div>
+  <div class="trip-card__body">
+    <h2 class="trip-card__title">{title}</h2>
+    <p class="trip-card__desc">{description}</p>
+    <span class="trip-card__cta">
+      {upcoming ? 'Brzy…' : 'Zobrazit výlet →'}
+    </span>
+  </div>
+</a>
