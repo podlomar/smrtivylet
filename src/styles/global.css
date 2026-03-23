@@ -81,13 +81,6 @@ a:hover {
   padding-bottom: var(--base-padding);
 }
 
-.banner--primary {
-  background-image: url(/img/banner1.jpg);
-}
-
-.banner--secondary {
-  background-image: url(/img/banner2.jpg);
-}
 
 .container {
   max-width: 54rem;
@@ -303,15 +296,23 @@ a:hover {
 .back-link {
   display: inline-block;
   margin-bottom: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
-  transition: color 0.2s ease;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease;
 }
 
-.back-link:hover,
 .back-link:visited {
   color: white;
+}
+
+.back-link:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Landing page hero */
@@ -321,7 +322,7 @@ a:hover {
 }
 
 .home-hero__title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 9vw, 5.5rem);
   font-weight: 900;
   line-height: 1.1;
   margin: 0 0 0.75rem;
@@ -329,7 +330,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.4em;
 }
 
 .home-hero__icon {
@@ -341,12 +342,6 @@ a:hover {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
-}
-
-@media screen and (min-width: 576px) {
-  .home-hero__title {
-    font-size: 5.5rem;
-  }
 }
 
 /* Trip cards grid */
@@ -381,8 +376,13 @@ a:hover {
   color: white;
 }
 
-.trip-card--upcoming {
-  filter: saturate(0.5);
+.trip-card--past {
+  opacity: 0.55;
+  filter: saturate(0.6);
+}
+
+.trip-card--past:hover {
+  opacity: 0.75;
 }
 
 .trip-card__banner {
@@ -411,6 +411,10 @@ a:hover {
   font-weight: 600;
   font-size: 0.8rem;
   backdrop-filter: blur(4px);
+}
+
+.trip-card__badge--past {
+  background: rgba(80, 80, 80, 0.75);
 }
 
 .trip-card__body {
