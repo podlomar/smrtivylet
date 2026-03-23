@@ -1,9 +1,9 @@
-
 * {
   box-sizing: border-box;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
   /* Crazy hack to fix a bug in Android Chrome called font boosting */
   * {
     max-height: 16777216px;
@@ -63,7 +63,8 @@ h3 {
   font-weight: 700;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: #CAD178;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -121,7 +122,7 @@ a:hover {
   margin-bottom: 3rem;
 }
 
-.columns > * {
+.columns>* {
   flex: 1;
 }
 
@@ -146,6 +147,82 @@ a:hover {
 
 .full-image:hover {
   transform: scale(1.05);
+}
+
+/* Coming soon section */
+.coming-soon {
+  margin-bottom: 3rem;
+  padding: var(--base-padding);
+  border-left: 3px solid rgba(193, 80, 31, 0.5);
+}
+
+.coming-soon__heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.coming-soon p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Voting CTA */
+.vote-cta {
+  text-align: center;
+  padding: 3rem var(--base-padding);
+  margin-bottom: 3rem;
+  background: rgba(193, 80, 31, 0.12);
+  border: 1px solid rgba(193, 80, 31, 0.3);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.vote-cta__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 0.5rem;
+}
+
+.vote-cta__heading {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.vote-cta__text {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 2rem;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vote-cta__button {
+  display: inline-block;
+  background: #C1501F;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.vote-cta__button:visited {
+  color: white;
+}
+
+.vote-cta__button:hover {
+  background: #d9602a;
+  color: white;
+  transform: translateY(-2px);
 }
 
 /* Timeline */
