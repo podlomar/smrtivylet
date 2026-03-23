@@ -6,20 +6,41 @@ interface Props {
   title: string;
   description: string;
   upcoming?: boolean;
+  past?: boolean;
 }
 
-const { year, href, image, title, description, upcoming = false } = Astro.props;
+const {
+  year,
+  href,
+  image,
+  title,
+  description,
+  upcoming = false,
+  past = false,
+} = Astro.props;
 ---
-<a href={href} class:list={['trip-card', { 'trip-card--upcoming': upcoming }]}>
+
+<a
+  href={href}
+  class:list={[
+    "trip-card",
+    { "trip-card--upcoming": upcoming, "trip-card--past": past },
+  ]}
+>
   <div class="trip-card__banner" style={`background-image: url(${image})`}>
     <span class="trip-card__year">{year}</span>
-    {upcoming && <span class="trip-card__badge">Připravujeme</span>}
+    {upcoming && <span class="trip-card__badge">Připravuje se</span>}
+    {
+      past && (
+        <span class="trip-card__badge trip-card__badge--past">Proběhl</span>
+      )
+    }
   </div>
   <div class="trip-card__body">
     <h2 class="trip-card__title">{title}</h2>
     <p class="trip-card__desc">{description}</p>
     <span class="trip-card__cta">
-      {upcoming ? 'Brzy…' : 'Zobrazit výlet →'}
+      {upcoming ? "Brzy…" : "Zobrazit výlet →"}
     </span>
   </div>
 </a>
