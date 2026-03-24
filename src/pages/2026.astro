@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Stop from "../components/Stop.astro";
 ---
 
 <Layout
@@ -85,12 +86,76 @@ import Layout from "../layouts/Layout.astro";
       </a>
     </section>
 
+    <section class="banner" style="background-image: url(/img/banner2.jpg)">
+      <div class="container">
+        <h2 class="main-heading">Plán trasy</h2>
+      </div>
+    </section>
+
+    <section class="stops">
+      <h3>Stanoviště</h3>
+
+      <Stop
+        number={1}
+        name="Zbraslavské náměstí"
+        km={0}
+        photo="/img/2026/zbraslav.jpg"
+        photoAlt="Zbraslavské náměstí"
+        mapUrl="https://mapy.com/s/begogekusu"
+      >
+        <p>Začátek celé trasy, odchod z náměstí v 7:18</p>
+      </Stop>
+
+      <Stop
+        number={2}
+        name="Kaple sv. Floriána"
+        km={8.2}
+        photo="/img/2026/florian.jpg"
+        photoAlt="Jíloviště, Kaple sv. Floriána"
+        mapUrl="https://mapy.com/s/hukukeveno"
+      >
+        <p>
+          Sraz u kaple v 8:55. Nachází se přímo u autobusové zastávky Jíloviště.
+        </p>
+      </Stop>
+
+      <Stop
+        number={3}
+        name="Rozhledna Korunka"
+        km={13.9}
+        photo="/img/2026/korunka.jpg"
+        photoAlt="Rozhledna Korunka"
+        mapUrl="https://mapy.com/s/gacogakeko"
+      >
+        <p>
+          Sraz u rozhledny v 10:10. Lze k ní dojít výšlapem po turistické značce
+          ze Všenor. Dáme si zde krátkou 20 min pauzu na kochání se výhledem.
+        </p>
+      </Stop>
+
+      <Stop
+        number={4}
+        name="Poutní místo Skalka"
+        km={19.7}
+        photo="/img/2026/skalka.jpg"
+        photoAlt="Poutní místo Skalka"
+        mapUrl="https://mapy.com/s/bahabomaka"
+      >
+        <p>
+          Sraz u vyhlášeného stánku s občerstvením přesně ve 12:00. Pokud se
+          chcete připojit zde, nejjednodušší cesta je přímo z Mníšku pod Brdy.
+          Je tu moc pěkné posezení, můžeme si lehce odpočinout a pak zase
+          nasadit tempo. Do cíle nám zbývá ještě krasných 30 km.
+        </p>
+      </Stop>
+    </section>
+
     <section class="coming-soon">
       <h2 class="coming-soon__heading">Další podrobnosti brzy</h2>
       <p>
-        Jakmile bude stanoven termín, přidáme sem plán stanovišť, jízdní řády
-        přípojů a všechny další informace potřebné pro účast. Zájemci si mohou
-        prohlédnout plán <a href="/2025">minulého ročníku</a>, aby získali
+        Jakmile bude stanoven termín, přidáme sem plán dalších stanovišť, jízdní
+        řády přípojů a všechny další informace potřebné pro účast. Zájemci si
+        mohou prohlédnout plán <a href="/2025">minulého ročníku</a>, aby získali
         představu o atmosféře výletu.
       </p>
     </section>
