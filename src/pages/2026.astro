@@ -24,6 +24,9 @@ import Stop from "../components/Stop.astro";
         společného putování. Bereme všechny, kdo se chtějí zúčastnit, zapšklé zálesáky,
         iritované intelektuály, křehké květinky, brečící batolata i pobúchané puberťáky.
       </p>
+      <p>
+        <b>Termín:</b> Neděle 26. dubna 2026
+      </p>
     </section>
 
     <section class="columns">
@@ -62,20 +65,21 @@ import Stop from "../components/Stop.astro";
           skupině.
         </p>
         <p>
-          Pivo po výletě plánujeme až v Berouně v zatím neznámo jaké hospůdce,
-          kterou včas vybereme.
+          Pivo po výletě plánujeme až v <a href="https://www.kozlovnaberoun.cz"
+            >Kozlovně v Berouně</a
+          >. Zde vydechneme a oslavíme grandiózní úspěchy výletu.
         </p>
       </div>
-      <a href="#">
+      <a href="https://www.kozlovnaberoun.cz">
         <img
-          src="/img/2026/beer.jpg"
-          alt="Neznámá berounská hospůdka"
+          src="/img/2026/kozlovna.jpg"
+          alt="Kozlovna Beroun"
           class="full-image"
         />
       </a>
     </section>
 
-    <section class="vote-cta">
+    <!-- <section class="vote-cta">
       <h2 class="vote-cta__heading">Hlasování o termínu</h2>
       <p class="vote-cta__text">
         Hlasujte prosím o termínu, kdy se můžete zúčastnit. Výsledky hlasování
@@ -84,7 +88,7 @@ import Stop from "../components/Stop.astro";
       <a href="https://strawpoll.com/XOgOVqP8Xn3" class="vote-cta__button">
         Hlasovat o termínu →
       </a>
-    </section>
+    </section> -->
 
     <section class="banner" style="background-image: url(/img/banner2.jpg)">
       <div class="container">
@@ -148,15 +152,28 @@ import Stop from "../components/Stop.astro";
           nasadit tempo. Do cíle nám zbývá ještě krasných 30 km.
         </p>
       </Stop>
+
+      <Stop
+        number={5}
+        name="Kytín, plastika ruky"
+        km={19.7}
+        photo="/img/2026/kytin.jpg"
+        photoAlt="Kytín, plastika ruky"
+        mapUrl="https://mapy.com/s/dupeduvaja"
+      >
+        <p>
+          Pokud se chcete připojit v Kytíně, potkáme se u místního rybníka u
+          sochy ruky v 13:10. Je to kousek od místního pivovaru, kterému se ale
+          zodpovědně vyhneme a frčíme do Dobříše.
+        </p>
+      </Stop>
     </section>
 
     <section class="coming-soon">
       <h2 class="coming-soon__heading">Další podrobnosti brzy</h2>
       <p>
-        Jakmile bude stanoven termín, přidáme sem plán dalších stanovišť, jízdní
-        řády přípojů a všechny další informace potřebné pro účast. Zájemci si
-        mohou prohlédnout plán <a href="/2025">minulého ročníku</a>, aby získali
-        představu o atmosféře výletu.
+        Postupně bude doplněn plán dalších stanovišť, jízdní řády přípojů a
+        všechny další informace potřebné pro účast.
       </p>
     </section>
   </main>
