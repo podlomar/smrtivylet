@@ -6,25 +6,39 @@ interface Props {
   photo: string;
   photoAlt: string;
   mapUrl: string;
-  extraLink?: { text: string; url: string };
+  connections?: { text: string; url: string };
 }
 
-const { number, name, km, photo, photoAlt, mapUrl, extraLink } = Astro.props;
+const { number, name, km, photo, photoAlt, mapUrl, connections } = Astro.props;
 const kmFormatted = km.toLocaleString('cs-CZ');
 ---
 <article class="stop">
   <div class="stop__content">
     <h4 class="stop__name">{name}</h4>
     <slot />
-    <p class="stop__links">
-      <a href={mapUrl}>Zobrazit na mapě</a>
-      {extraLink && (
-        <>
-          <br />
-          <a href={extraLink.url}>{extraLink.text}</a>
-        </>
+    <div class="stop__links">
+      <a href={mapUrl} class="stop__link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Zobrazit na mapě
+      </a>
+      {connections && (
+        <a href={connections.url} class="stop__link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="3" width="16" height="16" rx="2"/>
+            <path d="M4 11h16"/>
+            <path d="M12 3v8"/>
+            <path d="M8 19l-2 3"/>
+            <path d="M18 22l-2-3"/>
+            <circle cx="8.5" cy="14.5" r="0.5" fill="currentColor"/>
+            <circle cx="15.5" cy="14.5" r="0.5" fill="currentColor"/>
+          </svg>
+          {connections.text}
+        </a>
       )}
-    </p>
+    </div>
     <span class="stop__km">{kmFormatted}&nbsp;km</span>
   </div>
   <div class="stop__marker">
