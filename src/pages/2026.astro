@@ -33,7 +33,7 @@ import Stop from "../components/Stop.astro";
       <div>
         <h2>Průběh výletu</h2>
         <p>
-          Celková trasa má přesně 50 km, není však <b
+          Celková trasa má přesně 50,5 km, není však <b
             >vůbec nutné jít celou její délku</b
           >. Během výletu budeme procházet několika stanovišti, kde se můžete
           snadno připojit nebo odpojit. Každý se tedy může připojit na část,
@@ -44,12 +44,12 @@ import Stop from "../components/Stop.astro";
           oslavíme společné úspěchy.
         </p>
         <p>
-          <a href="https://mapy.com/s/bobesojamu"
+          <a href="https://mapy.com/s/nataporora"
             >Odkaz na plán trasy (Mapy.cz)</a
           >
         </p>
       </div>
-      <a href="https://mapy.com/s/bobesojamu">
+      <a href="https://mapy.com/s/nataporora">
         <img src="/img/2026/map.png" alt="Mapa trasy" class="full-image" />
       </a>
     </section>
@@ -120,7 +120,7 @@ import Stop from "../components/Stop.astro";
       <Stop
         number={2}
         name="Kaple sv. Floriána"
-        km={8.2}
+        km={8.6}
         photo="/img/2026/florian.jpg"
         photoAlt="Jíloviště, Kaple sv. Floriána"
         connections={{
@@ -138,7 +138,7 @@ import Stop from "../components/Stop.astro";
       <Stop
         number={3}
         name="Rozhledna Korunka"
-        km={13.9}
+        km={14.4}
         photo="/img/2026/korunka.jpg"
         photoAlt="Rozhledna Korunka"
         connections={{
@@ -159,41 +159,95 @@ import Stop from "../components/Stop.astro";
       <Stop
         number={4}
         name="Poutní místo Skalka"
-        km={19.7}
+        km={20.3}
         photo="/img/2026/skalka.jpg"
         photoAlt="Poutní místo Skalka"
         mapUrl="https://mapy.com/s/bahabomaka"
+        connections={{
+          text: "Spojení Praha - Mníšek pod Brdy",
+          url: "https://idos.cz/vlakyautobusymhdvse/spojeni/prehled/?p=Fyb5SSWpsOpfNdTbad2ENIP7nOB12u:w1eoDhgUBnmnLS9O0WmpxdecsgbUVz66AIR3R7hxjVZ8-",
+        }}
       >
         <p>
           Sraz u vyhlášeného stánku s občerstvením přesně ve 12:00. Pokud se
-          chcete připojit zde, nejjednodušší cesta je přímo z Mníšku pod Brdy.
-          Je tu moc pěkné posezení, můžeme si lehce odpočinout a pak zase
-          nasadit tempo. Do cíle nám zbývá ještě krasných 30 km.
+          chcete připojit zde, budete muset na Skalku dojít z náměstí v Mníšku
+          pod Brdy, což je asi 2.5 km po turistické značce, nebo 1.7 km lesem.
+          Vyplatí se jet autobusem ze Smíchovského nádraží, který přijíždí do
+          Mníšku v 11:03. Na Skalce je moc pěkné posezení, můžeme si lehce
+          odpočinout a pak zase nasadit tempo. Do cíle nám zbývá ještě krásných
+          30 km.
         </p>
       </Stop>
 
       <Stop
         number={5}
         name="Kytín, plastika ruky"
-        km={19.7}
+        km={25.2}
         photo="/img/2026/kytin.jpg"
         photoAlt="Kytín, plastika ruky"
         mapUrl="https://mapy.com/s/dupeduvaja"
+        connections={{
+          text: "Spojení Praha - Kytín",
+          url: "https://idos.cz/vlakyautobusymhdvse/spojeni/prehled/?p=Fyb5SSWpsOpfNdTbad2ENLvSEcchU4q5JCDb7y5ts:maCF5TGGtHMpqzo1BrtE3eb7x3LQJEPWAjeLWeQybkB9bECe20Ppgm1gK2uHiMq1ewBgkSXffZcbHG5AxqaHCK",
+        }}
       >
         <p>
           Pokud se chcete připojit v Kytíně, potkáme se u místního rybníka u
-          sochy ruky v 13:10. Je to kousek od místního pivovaru, kterému se ale
-          zodpovědně vyhneme a frčíme do Dobříše.
+          sochy ruky v 13:25. Je to kousek od místního pivovaru, kterému se ale
+          zodpovědně vyhneme a frčíme do Dobříše. Do Kytína pojedete z Prahy
+          hlavního nádraží s přestupem na autobus v Dobřichovicích. Můžete ale
+          také přijet dříve, dát si oběd v místním Pivovaru a počkat na hlavní
+          skupinu, která dorazí z Mníšku.
+        </p>
+      </Stop>
+
+      <Stop
+        number={6}
+        name="Dobříš, náměstí"
+        km={35.5}
+        photo="/img/2026/dobris.jpg"
+        photoAlt="Dobříš, náměstí"
+        mapUrl="https://mapy.com/s/gujesonaza"
+        connections={{
+          text: "Spojení Praha - Dobříš",
+          url: "https://idos.cz/vlakyautobusymhdvse/spojeni/prehled/?p=Fyb5SSWpsOpfNdTbad2ENIP7nOB12u:wHxaQ2EhBCo2.3PtHr6qjrp:eGXbKKa2TcJr1JD1v9uc-",
+        }}
+      >
+        <p>
+          Poslední místo, kde je ještě možné se připojit, je náměstí v Dobříši.
+          Měli bychom sem dorazit v 15:45. Odsud nás čeká možná nejhezčí část
+          trasy. Posledních 14.5 km vede po rovince krásnými lesy a přírodou až
+          do Hostomic. Pokud se chcete připojit v Dobříši, vyražte ze
+          Smíchovského nádraží busem v 14:55.
+        </p>
+      </Stop>
+
+      <Stop
+        number={7}
+        name="Hostomice, nádraží"
+        km={50.5}
+        photo="/img/2026/hostomice.jpg"
+        photoAlt="Hostomice, nádraží"
+        mapUrl="https://mapy.com/s/gujesonaza"
+        connections={{
+          text: "Spojení Hostomice - Beroun",
+          url: "https://idos.cz/vlakyautobusymhdvse/spojeni/prehled/?p=Fyb5SSWpsOpfNdTbad2ENBBhbcX7GhLtzJQbjS9pcVB4Chy2HKMr.7GVLBC9Cutqfn56hFZdEmjG:wFs29Gyq8yTd8xgCoRezvNgdYTNsNhlhMmnuXQgtlsKMORlsGr:QAi83cn:Se4-",
+        }}
+      >
+        <p>
+          Vytoužený a vymodlený cíl naší cesty. Musíme sem dorazit nejpozději v
+          19:09, abychom stihli vlak do Berouna, kde zapadneme do hospůdky,
+          zapijeme fyzická i duševní zranění a bujaře oslavíme, že jsme přežili!
         </p>
       </Stop>
     </section>
 
-    <section class="coming-soon">
+    <!-- <section class="coming-soon">
       <h2 class="coming-soon__heading">Další podrobnosti brzy</h2>
       <p>
         Postupně bude doplněn plán dalších stanovišť, jízdní řády přípojů a
         všechny další informace potřebné pro účast.
       </p>
-    </section>
+    </section> -->
   </main>
 </Layout>
